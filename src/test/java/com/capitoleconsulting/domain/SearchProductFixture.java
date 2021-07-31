@@ -1,5 +1,8 @@
 package com.capitoleconsulting.domain;
 
+import com.capitoleconsulting.domain.dto.ProductDTO;
+import com.capitoleconsulting.domain.entity.Product;
+
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.ArrayList;

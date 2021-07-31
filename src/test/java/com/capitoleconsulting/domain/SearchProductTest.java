@@ -2,6 +2,7 @@ package com.capitoleconsulting.domain;
 
 import com.capitoleconsulting.action.SearchProduct;
 
+import com.capitoleconsulting.domain.dto.ProductDTO;
 import org.mockito.Mockito;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;

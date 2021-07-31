@@ -1,12 +1,12 @@
 package com.capitoleconsulting.action;
 
-import com.capitoleconsulting.domain.DateTime;
-import com.capitoleconsulting.domain.Product;
-import com.capitoleconsulting.domain.ProductDTO;
+import java.util.Comparator;
+
+import com.capitoleconsulting.domain.date.DateTime;
+import com.capitoleconsulting.domain.entity.Product;
+import com.capitoleconsulting.domain.dto.ProductDTO;
 import com.capitoleconsulting.domain.ProductRepository;
 import com.capitoleconsulting.domain.exception.ProductNotFoundException;
-
-import java.util.Comparator;
 
 public class SearchProduct {
 

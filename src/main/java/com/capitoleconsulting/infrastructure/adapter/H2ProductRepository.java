@@ -1,6 +1,6 @@
 package com.capitoleconsulting.infrastructure.adapter;
 
-import com.capitoleconsulting.domain.Product;
+import com.capitoleconsulting.domain.entity.Product;
 import com.capitoleconsulting.domain.ProductRepository;
 
 import java.util.List;

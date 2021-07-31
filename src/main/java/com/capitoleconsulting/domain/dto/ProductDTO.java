@@ -1,4 +1,6 @@
-package com.capitoleconsulting.domain;
+package com.capitoleconsulting.domain.dto;
+
+import com.capitoleconsulting.domain.entity.Product;
 
 import java.time.LocalDateTime;
 

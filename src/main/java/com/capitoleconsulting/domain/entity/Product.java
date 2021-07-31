@@ -1,8 +1,5 @@
-package com.capitoleconsulting.domain;
+package com.capitoleconsulting.domain.entity;
 
-import org.apache.tomcat.jni.Local;
-
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Product {
@@ -57,10 +54,6 @@ public class Product {
 
     public String currency() {
         return this.currency;
-    }
-
-    public boolean dateIsBetween(LocalDateTime date){
-        return this.endDate.isAfter(date) && this.startDate.isBefore(date);
     }
 
 }
