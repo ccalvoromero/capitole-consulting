@@ -1,4 +1,4 @@
-package com.capitoleconsulting.domain.entity;
+package com.capitoleconsulting.domain.model;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -89,6 +89,10 @@ public class ProductPrice {
 
     public String currency() {
         return this.currency;
+    }
+
+    public boolean isActive(DateTime date) {
+        return date.isBetween(this.startDate, this.endDate);
     }
 
 }

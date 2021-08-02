@@ -1,6 +1,6 @@
-package com.capitoleconsulting.domain.dto;
+package com.capitoleconsulting.domain;
 
-import com.capitoleconsulting.domain.entity.ProductPrice;
+import com.capitoleconsulting.domain.model.ProductPrice;
 
 import java.time.LocalDateTime;
 
@@ -31,22 +31,23 @@ public class ProductPriceResponse {
     }
 
     public Long getProductId() {
-        return productId;
+        return this.productId;
     }
 
     public Long getBrandId() {
-        return brandId;
+        return this.brandId;
     }
 
     public Integer getPriceId() {
-        return priceId;
+        return this.priceId;
     }
 
     public LocalDateTime getStartApplicationDate() {
-        return startApplicationDate;
+        return this.startApplicationDate;
     }
 
     public LocalDateTime getEndApplicationDate() {
-        return endApplicationDate;
+        return this.endApplicationDate;
     }
+
 }

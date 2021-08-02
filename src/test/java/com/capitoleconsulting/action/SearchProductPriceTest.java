@@ -1,14 +1,14 @@
-package com.capitoleconsulting.domain;
+package com.capitoleconsulting.action;
 
+import com.capitoleconsulting.domain.port.ProductRepository;
 import org.mockito.Mockito;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Assertions;
 
-import com.capitoleconsulting.action.SearchProductPrice;
-import com.capitoleconsulting.domain.dto.ProductPriceResponse;
+import com.capitoleconsulting.domain.ProductPriceResponse;
 
-import static com.capitoleconsulting.domain.SearchProductPriceFixture.*;
+import static com.capitoleconsulting.action.SearchProductPriceFixture.*;
 
 public class SearchProductPriceTest {
 

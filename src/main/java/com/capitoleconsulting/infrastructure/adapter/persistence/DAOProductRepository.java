@@ -1,6 +1,6 @@
-package com.capitoleconsulting.infrastructure.adapter.persistence.dao;
+package com.capitoleconsulting.infrastructure.adapter.persistence;
 
-import com.capitoleconsulting.domain.entity.ProductPrice;
+import com.capitoleconsulting.domain.model.ProductPrice;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface DAOProductRepository extends JpaRepository<ProductPrice, Long> { }

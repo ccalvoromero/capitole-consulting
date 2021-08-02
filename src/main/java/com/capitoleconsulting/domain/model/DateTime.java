@@ -1,4 +1,4 @@
-package com.capitoleconsulting.domain.date;
+package com.capitoleconsulting.domain.model;
 
 import java.time.LocalDateTime;
 
