@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "PRICES")
-public class Prices {
+public class ProductPrice {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,13 +35,13 @@ public class Prices {
     @Column(name = "CURRENCY", nullable = false)
     private String currency;
 
-    public Prices(Double price, LocalDateTime startDate, LocalDateTime endDate) {
+    public ProductPrice(Double price, LocalDateTime startDate, LocalDateTime endDate) {
         this.price = price;
         this.startDate = startDate;
         this.endDate = endDate;
     }
 
-    public Prices(Long id, Long brandId, LocalDateTime startDate, LocalDateTime endDate, Integer priceList, Long productId, Integer priority, Double price, String currency) {
+    public ProductPrice(Long id, Long brandId, LocalDateTime startDate, LocalDateTime endDate, Integer priceList, Long productId, Integer priority, Double price, String currency) {
         this.id = id;
         this.brandId = brandId;
         this.startDate = startDate;
@@ -53,7 +53,7 @@ public class Prices {
         this.currency = currency;
     }
 
-    public Prices() { }
+    public ProductPrice() { }
 
     public Long id() {
         return this.id;
