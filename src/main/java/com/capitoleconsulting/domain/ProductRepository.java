@@ -1,9 +1,9 @@
 package com.capitoleconsulting.domain;
 
-import com.capitoleconsulting.domain.entity.Product;
+import com.capitoleconsulting.domain.entity.Prices;
 
 import java.util.List;
 
-public interface ProductRepository {
-    List<Product> searchProducts(Long productId, Long brandId);
+public interface ProductRepository  {
+    List<Prices> searchProducts(Long productId, Long brandId);
 }

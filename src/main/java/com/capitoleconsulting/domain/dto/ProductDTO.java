@@ -1,6 +1,6 @@
 package com.capitoleconsulting.domain.dto;
 
-import com.capitoleconsulting.domain.entity.Product;
+import com.capitoleconsulting.domain.entity.Prices;
 
 import java.time.LocalDateTime;
 
@@ -17,7 +17,7 @@ public class ProductDTO {
         this.finalPrice = finalPrice;
     }
 
-    public ProductDTO(Product product) {
+    public ProductDTO(Prices product) {
         this.productId = product.productId();
         this.brandId = product.brandId();
         this.priceId = product.priceList();

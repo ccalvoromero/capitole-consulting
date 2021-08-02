@@ -1,7 +1,7 @@
 package com.capitoleconsulting.domain;
 
 import com.capitoleconsulting.domain.dto.ProductDTO;
-import com.capitoleconsulting.domain.entity.Product;
+import com.capitoleconsulting.domain.entity.Prices;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -13,8 +13,8 @@ public class SearchProductFixture {
     protected static final Long aBrandId = 1L;
     protected static ProductDTO actualProduct;
     protected static final ProductDTO expectedProduct = new ProductDTO(35.50);
-    protected static final List<Product> expectedProducts =
-        new ArrayList<Product>() {{
-            add(new Product(35.50, LocalDateTime.parse("2020-06-14T00:00:00"), LocalDateTime.parse("2020-12-31T23:59:59")));
+    protected static final List<Prices> expectedProducts =
+        new ArrayList<Prices>() {{
+            add(new Prices(35.50, LocalDateTime.parse("2020-06-14T00:00:00"), LocalDateTime.parse("2020-12-31T23:59:59")));
         }};
 }
