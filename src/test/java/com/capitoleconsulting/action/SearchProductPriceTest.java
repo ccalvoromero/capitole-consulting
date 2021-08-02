@@ -1,12 +1,13 @@
 package com.capitoleconsulting.action;
 
+import com.capitoleconsulting.domain.model.ProductPrice;
 import com.capitoleconsulting.domain.port.ProductRepository;
 import org.mockito.Mockito;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Assertions;
 
-import com.capitoleconsulting.domain.ProductPriceResponse;
+import com.capitoleconsulting.infrastructure.adapter.api.ProductPriceResponse;
 
 import static com.capitoleconsulting.action.SearchProductPriceFixture.*;
 
@@ -36,8 +37,8 @@ public class SearchProductPriceTest {
         actualProductPrice = searchProductPrice.execute(applicationDate, productId, brandId);
     }
 
-    private void then_the_product_price_is_equals_than_expected(ProductPriceResponse expected, ProductPriceResponse actual) {
-        Assertions.assertEquals(expected.getFinalPrice(), actual.getFinalPrice());
+    private void then_the_product_price_is_equals_than_expected(ProductPrice expected, ProductPrice actual) {
+        Assertions.assertEquals(expected.price(), actual.price());
     }
 
 }

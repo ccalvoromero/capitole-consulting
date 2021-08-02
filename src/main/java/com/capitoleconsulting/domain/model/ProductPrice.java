@@ -14,10 +14,10 @@ public class ProductPrice {
     @Column(name = "BRAND_ID", nullable = false)
     private Long brandId;
 
-    @Column(name = "START_DATE")
+    @Column(name = "START_DATE", nullable = false)
     private LocalDateTime startDate;
 
-    @Column(name = "END_DATE")
+    @Column(name = "END_DATE", nullable = false)
     private LocalDateTime endDate;
 
     @Column(name = "PRICE_LIST", nullable = false)
@@ -41,23 +41,7 @@ public class ProductPrice {
         this.endDate = endDate;
     }
 
-    public ProductPrice(Long id, Long brandId, LocalDateTime startDate, LocalDateTime endDate, Integer priceList, Long productId, Integer priority, Double price, String currency) {
-        this.id = id;
-        this.brandId = brandId;
-        this.startDate = startDate;
-        this.endDate = endDate;
-        this.priceList = priceList;
-        this.productId = productId;
-        this.priority = priority;
-        this.price = price;
-        this.currency = currency;
-    }
-
-    public ProductPrice() { }
-
-    public Long id() {
-        return this.id;
-    }
+    protected ProductPrice() { }
 
     public Long brandId() {
         return this.brandId;
@@ -85,10 +69,6 @@ public class ProductPrice {
 
     public Double price() {
         return this.price;
-    }
-
-    public String currency() {
-        return this.currency;
     }
 
     public boolean isActive(DateTime date) {

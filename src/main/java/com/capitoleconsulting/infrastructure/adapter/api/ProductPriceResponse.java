@@ -1,21 +1,16 @@
-package com.capitoleconsulting.domain;
-
-import com.capitoleconsulting.domain.model.ProductPrice;
+package com.capitoleconsulting.infrastructure.adapter.api;
 
 import java.time.LocalDateTime;
+import com.capitoleconsulting.domain.model.ProductPrice;
 
 public class ProductPriceResponse {
 
-    private Long productId;
-    private Long brandId;
-    private Integer priceId;
-    private LocalDateTime startApplicationDate;
-    private LocalDateTime endApplicationDate;
+    private final Long productId;
+    private final Long brandId;
+    private final Integer priceId;
+    private final LocalDateTime startApplicationDate;
+    private final LocalDateTime endApplicationDate;
     private final Double finalPrice;
-
-    public ProductPriceResponse(Double finalPrice) {
-        this.finalPrice = finalPrice;
-    }
 
     public ProductPriceResponse(ProductPrice product) {
         this.productId = product.productId();

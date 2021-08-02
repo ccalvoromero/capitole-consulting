@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.capitoleconsulting.action.SearchProductPrice;
-import com.capitoleconsulting.domain.ProductPriceResponse;
+import com.capitoleconsulting.domain.model.ProductPrice;
 
 @RestController
 @RequestMapping("/api")
@@ -17,11 +17,11 @@ public class ProductController {
         this.searchProductPrice = searchProductPrice;
     }
 
-    @GetMapping("/brands/{brandId}/products/{productId}")
+    @GetMapping( "/brands/{brandId}/products/{productId}")
     public ResponseEntity<ProductPriceResponse> searchProductPrice(
         @RequestParam String applicationDate, @PathVariable Long productId, @PathVariable Long brandId) {
-            ProductPriceResponse productPriceResponse = searchProductPrice.execute(applicationDate, productId, brandId);
-            return new ResponseEntity<>(productPriceResponse, HttpStatus.OK);
+            ProductPrice productPrice = searchProductPrice.execute(applicationDate, productId, brandId);
+            return new ResponseEntity<>(new ProductPriceResponse(productPrice), HttpStatus.OK);
     }
 
 }
