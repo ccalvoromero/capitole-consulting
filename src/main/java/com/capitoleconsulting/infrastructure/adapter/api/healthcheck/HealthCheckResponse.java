@@ -1,4 +1,4 @@
-package com.capitoleconsulting.infrastructure.adapter.api;
+package com.capitoleconsulting.infrastructure.adapter.api.healthcheck;
 
 import java.time.LocalDateTime;
 import com.fasterxml.jackson.annotation.JsonProperty;

@@ -1,4 +1,4 @@
-package com.capitoleconsulting.infrastructure.adapter.api;
+package com.capitoleconsulting.infrastructure.adapter.api.healthcheck;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

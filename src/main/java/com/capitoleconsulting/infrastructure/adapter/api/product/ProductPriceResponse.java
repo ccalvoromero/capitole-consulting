@@ -1,9 +1,8 @@
-package com.capitoleconsulting.infrastructure.adapter.api;
+package com.capitoleconsulting.infrastructure.adapter.api.product;
 
 import java.time.LocalDateTime;
-import com.capitoleconsulting.domain.model.ProductPrice;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.capitoleconsulting.domain.model.ProductPrice;
 
 public class ProductPriceResponse {
 
