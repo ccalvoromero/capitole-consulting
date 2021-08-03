@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.*;
 import com.capitoleconsulting.action.SearchProductPrice;
 import com.capitoleconsulting.domain.model.ProductPrice;
 
+import org.springframework.transaction.annotation.Transactional;
+
 @RestController
 @RequestMapping("/api")
 public class ProductController {
@@ -17,7 +19,8 @@ public class ProductController {
         this.searchProductPrice = searchProductPrice;
     }
 
-    @GetMapping( "/brands/{brandId}/products/{productId}")
+    @GetMapping("/brands/{brandId}/products/{productId}")
+    @Transactional(readOnly = true)
     public ResponseEntity<ProductPriceResponse> searchProductPrice(
         @RequestParam String applicationDate, @PathVariable Long productId, @PathVariable Long brandId) {
             ProductPrice productPrice = searchProductPrice.execute(applicationDate, productId, brandId);

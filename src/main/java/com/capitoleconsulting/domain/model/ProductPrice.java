@@ -1,47 +1,28 @@
 package com.capitoleconsulting.domain.model;
 
-import javax.persistence.*;
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "PRICES")
 public class ProductPrice {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private final Long brandId;
+    private final LocalDateTime startDate;
+    private final LocalDateTime endDate;
+    private final Integer priceList;
+    private final Long productId;
+    private final Integer priority;
+    private final Double price;
+    private final String currency;
 
-    @Column(name = "BRAND_ID", nullable = false)
-    private Long brandId;
-
-    @Column(name = "START_DATE", nullable = false)
-    private LocalDateTime startDate;
-
-    @Column(name = "END_DATE", nullable = false)
-    private LocalDateTime endDate;
-
-    @Column(name = "PRICE_LIST", nullable = false)
-    private Integer priceList;
-
-    @Column(name = "PRODUCT_ID", nullable = false)
-    private Long productId;
-
-    @Column(name = "PRIORITY", nullable = false)
-    private Integer priority;
-
-    @Column(name = "PRICE", nullable = false)
-    private Double price;
-
-    @Column(name = "CURRENCY", nullable = false)
-    private String currency;
-
-    public ProductPrice(Double price, LocalDateTime startDate, LocalDateTime endDate) {
-        this.price = price;
+    public ProductPrice(Long brandId, LocalDateTime startDate, LocalDateTime endDate, Integer priceList, Long productId, Integer priority, Double price, String currency) {
+        this.brandId = brandId;
         this.startDate = startDate;
         this.endDate = endDate;
+        this.priceList = priceList;
+        this.productId = productId;
+        this.priority = priority;
+        this.price = price;
+        this.currency = currency;
     }
-
-    protected ProductPrice() { }
 
     public Long brandId() {
         return this.brandId;

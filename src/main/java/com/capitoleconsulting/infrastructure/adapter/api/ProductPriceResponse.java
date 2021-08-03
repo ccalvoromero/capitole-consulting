@@ -3,13 +3,26 @@ package com.capitoleconsulting.infrastructure.adapter.api;
 import java.time.LocalDateTime;
 import com.capitoleconsulting.domain.model.ProductPrice;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class ProductPriceResponse {
 
+    @JsonProperty
     private final Long productId;
+
+    @JsonProperty
     private final Long brandId;
+
+    @JsonProperty
     private final Integer priceId;
+
+    @JsonProperty
     private final LocalDateTime startApplicationDate;
+
+    @JsonProperty
     private final LocalDateTime endApplicationDate;
+
+    @JsonProperty
     private final Double finalPrice;
 
     public ProductPriceResponse(ProductPrice product) {
@@ -19,30 +32,6 @@ public class ProductPriceResponse {
         this.startApplicationDate = product.startDate();
         this.endApplicationDate = product.endDate();
         this.finalPrice = product.price();
-    }
-
-    public Double getFinalPrice() {
-        return this.finalPrice;
-    }
-
-    public Long getProductId() {
-        return this.productId;
-    }
-
-    public Long getBrandId() {
-        return this.brandId;
-    }
-
-    public Integer getPriceId() {
-        return this.priceId;
-    }
-
-    public LocalDateTime getStartApplicationDate() {
-        return this.startApplicationDate;
-    }
-
-    public LocalDateTime getEndApplicationDate() {
-        return this.endApplicationDate;
     }
 
 }
