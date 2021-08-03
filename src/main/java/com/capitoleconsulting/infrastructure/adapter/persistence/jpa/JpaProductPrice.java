@@ -1,4 +1,4 @@
-package com.capitoleconsulting.infrastructure.adapter.persistence;
+package com.capitoleconsulting.infrastructure.adapter.persistence.jpa;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
