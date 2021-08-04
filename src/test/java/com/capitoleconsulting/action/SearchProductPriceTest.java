@@ -1,5 +1,6 @@
 package com.capitoleconsulting.action;
 
+import com.capitoleconsulting.domain.exception.ProductPriceNotFoundException;
 import org.mockito.Mockito;
 
 import org.junit.jupiter.api.Test;
@@ -23,14 +24,21 @@ public class SearchProductPriceTest {
     }
 
    @Test
-    public void search_product_price_on_the_14th_at_10am_successfully() {
+    public void search_an_existing_product_returns_the_priority_price_successfully() {
        given_saved_products_in_a_repository();
-       when_search_a_product_given_some_parameters(anApplicationDate, aProductId, aBrandId);
+       when_search_a_product_given_some_parameters(anApplicationDate, anExistingProductId, aBrandId);
        then_the_product_price_is_equals_than_expected(expectedProductPrice, actualProductPrice);
     }
 
+    @Test
+    public void search_an_invalid_product_price_throws_an_exception() {
+        given_saved_products_in_a_repository();
+        Assertions.assertThrows(ProductPriceNotFoundException.class, () ->
+            when_search_a_product_given_some_parameters(anApplicationDate, aNonExistingProductId, aBrandId));
+    }
+
     private void given_saved_products_in_a_repository() {
-        Mockito.when(productRepository.prices(aProductId, aBrandId)).thenReturn(expectedProducts);
+        Mockito.when(productRepository.prices(anExistingProductId, aBrandId)).thenReturn(expectedProducts);
     }
 
     private void when_search_a_product_given_some_parameters(String applicationDate, Long productId, Long brandId) {

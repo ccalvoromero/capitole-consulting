@@ -8,7 +8,8 @@ import com.capitoleconsulting.domain.model.ProductPrice;
 
 public class SearchProductPriceFixture {
     protected static final String anApplicationDate = "2020-06-14T10:00:00";
-    protected static final Long aProductId = 35455L;
+    protected static final Long anExistingProductId = 35455L;
+    protected static final Long aNonExistingProductId = 11111L;
     protected static final Long aBrandId = 1L;
     protected static ProductPrice actualProductPrice;
     protected static final ProductPrice expectedProductPrice =
