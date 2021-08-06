@@ -1,8 +1,10 @@
 package com.capitoleconsulting.action;
 
+import org.springframework.stereotype.Component;
 import com.capitoleconsulting.domain.port.ProductRepository;
 import com.capitoleconsulting.domain.port.NewPriceRepository;
 
+@Component
 public class UpdatePrices {
 
     private final ProductRepository productRepository;
@@ -14,7 +16,7 @@ public class UpdatePrices {
     }
 
     public void execute(String source) {
-        newPriceRepository.get(source).forEach(productRepository::update);
+        newPriceRepository.getUpdatedPrices(source).forEach(productRepository::update);
     }
 
 }

@@ -71,8 +71,12 @@ public class ProductPrice {
         return this.price;
     }
 
-    public String currency() {
-        return this.currency;
+    public LocalDateTime lastUpdate() {
+        return this.lastUpdate;
+    }
+
+    public String lastUpdateBy() {
+        return this.lastUpdateBy;
     }
 
     public boolean isActive(DateTime date) {

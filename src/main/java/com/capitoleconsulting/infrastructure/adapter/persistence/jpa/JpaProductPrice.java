@@ -35,6 +35,12 @@ public class JpaProductPrice {
     @Column(name = "CURRENCY", nullable = false)
     private String currency;
 
+    @Column(name = "LAST_UPDATE")
+    private LocalDateTime lastUpdate;
+
+    @Column(name = "LAST_UPDATE_BY")
+    private String lastUpdateBy;
+
     public Long brandId() {
         return this.brandId;
     }

@@ -4,5 +4,5 @@ import java.util.stream.Stream;
 import com.capitoleconsulting.domain.model.ProductPrice;
 
 public interface NewPriceRepository {
-    Stream<ProductPrice> get(String source);
+    Stream<ProductPrice> getUpdatedPrices(String source);
 }

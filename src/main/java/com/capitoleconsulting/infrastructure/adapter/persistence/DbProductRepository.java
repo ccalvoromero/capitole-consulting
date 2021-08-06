@@ -34,7 +34,16 @@ public class DbProductRepository implements ProductRepository {
 
     @Override
     public void update(ProductPrice productPrice) {
-        System.out.println(productPrice);
+        jpaProductRepository.updatePrice(
+            productPrice.productId(),
+            productPrice.brandId(),
+            productPrice.startDate(),
+            productPrice.endDate(),
+            productPrice.price(),
+            productPrice.priority(),
+            productPrice.lastUpdate(),
+            productPrice.lastUpdateBy()
+        );
     }
 
 }

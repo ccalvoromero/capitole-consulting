@@ -36,7 +36,7 @@ public class UpdatePricesTest {
     }
 
     private void given_we_get_new_prices_from_a_repository() {
-        Mockito.when(newPriceRepository.get(aSource)).thenReturn(productPrices);
+        Mockito.when(newPriceRepository.getUpdatedPrices(aSource)).thenReturn(productPrices);
     }
 
     private void when_update_product_data_then_they_have_new_prices() {

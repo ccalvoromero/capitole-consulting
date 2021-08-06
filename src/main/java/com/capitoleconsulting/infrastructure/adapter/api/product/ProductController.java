@@ -3,11 +3,10 @@ package com.capitoleconsulting.infrastructure.adapter.api.product;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.transaction.annotation.*;
 
 import com.capitoleconsulting.action.SearchProductPrice;
 import com.capitoleconsulting.domain.model.ProductPrice;
-
-import org.springframework.transaction.annotation.Transactional;
 
 @RestController
 @RequestMapping("/api")
