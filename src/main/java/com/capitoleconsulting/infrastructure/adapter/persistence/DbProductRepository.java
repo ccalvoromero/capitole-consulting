@@ -32,4 +32,9 @@ public class DbProductRepository implements ProductRepository {
                 ));
     }
 
+    @Override
+    public void update(ProductPrice productPrice) {
+        System.out.println(productPrice);
+    }
+
 }
