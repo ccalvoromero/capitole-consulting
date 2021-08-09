@@ -1,6 +1,7 @@
 package com.capitoleconsulting.action;
 
 import org.springframework.stereotype.Component;
+
 import com.capitoleconsulting.domain.port.ProductRepository;
 import com.capitoleconsulting.domain.port.NewPriceRepository;
 
